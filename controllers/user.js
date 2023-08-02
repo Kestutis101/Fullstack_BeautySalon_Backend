@@ -52,10 +52,10 @@ export async function register(req, res) {
   }
 }
 
-// export function handleBadRequests(req, res) {
-//   try {
-//     res.status(404).json({ message: "Bad Request, Not Found" });
-//   } catch (error) {
-//     res.status(500).json({ message: "Internal Server Error" });
-//   }
-// }
+export function handleBadRequests(req, res) {
+  try {
+    res.status(404).json({ message: "Bad Request, Not Found" });
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+}
