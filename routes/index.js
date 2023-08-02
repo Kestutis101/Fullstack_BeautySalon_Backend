@@ -20,6 +20,6 @@ router.delete("/clients/:id", clientDoestExist, deleteClient);
 
 router.post("/login", login);
 router.post("/register", register);
-router.all("/*", handleBadRequests);
+// router.all("/*", handleBadRequests);
 
 export default router;
