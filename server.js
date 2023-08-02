@@ -7,7 +7,6 @@ import router from "./routes/index.js";
 dotenv.config();
 
 const MONGO_URI = process.env.MONGO_URI;
-const PORT = process.env.PORT || 4000;
 
 mongoose
   .connect(MONGO_URI)
@@ -18,7 +17,5 @@ const app = express();
 
 app.use(cors());
 app.use(router);
-
-app.listen(() => PORT);
 
 export default app;
